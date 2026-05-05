@@ -1,0 +1,20 @@
+{
+  "name": "to_do",
+  "version": "1.0.0",
+  "description": "a simple todo app",
+  "main": "webpack.config.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alejandroct",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.4",
+    "html-webpack-plugin": "^5.6.7",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3"
+  }
+}
