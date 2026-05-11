@@ -8,24 +8,45 @@
 </head>
 <body>
 <div id="wrapper">
-<header>
-    <div class="header-container">
-        <h1 class="title">TODO</h1>
-        <div class="panel">
-            <div class="field"></div>
-            <div class="selector"></div>
-            <div class="theme-change"></div>
+    <header>
+        <h1 class="header-title">TODO</h1>
+        <div class="nav-panel">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="search" class="search-input">
+            </div>
+            <div class="select">
+            <select name="category" id="category">
+                <option value="">ALL</option>
+                <option value="">INCOMPLETE</option>
+                <option value="">COMPLETE</option>
+            </select>
+            <button class="theme-btn">theme</button>
+            <button class="add-btn">add</button>
+        </div>
+        </div>
+    </header>
+    <main>
+        <section class="list-container">
+            <div class="todo-item">
+                <input type="checkbox" class="todo-checkbox">
+                <span class="todo-text">texto de ejemplo</span>
+                <div class="todo-actions">
+                    <button class="edit-btn action-btn">edit</button>
+                    <button class="delete-btn action-btn">delete</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-card">
+            <h2 class="modal-title">NEW NOTE</h2>
+            <input type="text" class="modal-input" placeholder="New note...">
+            <div class="modal-actions">
+                <button class="btn-cancel modal-btn">CANCEL</button>
+                <button class="btn-apply modal-btn">APPLY</button>
+            </div>
         </div>
     </div>
-</header>
-hola
-<main>
-    <section class="list">
-        <div class="list-container">
-
-        </div>
-    </section>
-</main>
-</div>
 </body>
 </html>
