@@ -35,10 +35,11 @@ header{
 }
 
 .header-title{
-    font-size: 20px;
+    font-size: 26px;
     letter-spacing: 4px;
     margin-bottom: 12px;
-    font-weight: 550;
+    font-weight: bold;
+    padding: 10px 0;
     color: var(--text-color);
 }
 
@@ -54,36 +55,44 @@ header{
 }
 
 .search-input{
-    width: 100%;
-    padding: 4px 8px 4px 180px;
+    width: 511px;
+    padding: 10px 8px 10px 40px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     outline: none;
-    font-size: 12px;
     background: transparent;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
-    .search-icon{
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--primary-color);
+.search-icon{
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+
+    svg{
+        fill: var(--primary-color);
     }
+}
 
 select{
     background-color: var(--primary-color);
     color: white;
-    height: 30px;
-    width: 130px;
+    height: 40px;
+    width: 160px;
     border-radius: 4px;
+    outline: none;
     border: none;
     font-weight: 500;
     cursor: pointer;
-    appearance: none;  /* ARROW */
+    /* appearance: none;  ARROW */
     min-width: 100px;
     text-align: left;
-    padding-left: 5px;
+    padding: 5px;
     font-weight: bold;
 }
 
@@ -91,20 +100,27 @@ select{
     background-color: var(--primary-color);
     color: white;
     border: none;
-    height: 30px;
+    height: 40px;
     aspect-ratio: 1/1;
     border-radius: 5px;
     cursor: pointer;
+    svg{
+        fill: white;
+    }
 }
 
 .add-btn{
     background-color: var(--primary-color);
     color: white;
     border: none;
-    height: 30px;
+    height: 40px;
     aspect-ratio: 1/1;
     border-radius: 5px;
     cursor: pointer;
+
+    svg {
+        fill: white;
+    }
 }
 
 .list-container{
@@ -177,13 +193,13 @@ select{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0 0 0 / 0.5);
+    background: rgba(0 0 0 / 0.6);
 
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 
     align-items: start;
-    padding-top: 2rem;
+    padding-top: 3rem;
     justify-content: center;
     z-index: 100;
     transition: all 0.3s ease;
@@ -196,27 +212,29 @@ select{
 .modal-card{
     background-color: white;
     width: 100%;
-    max-width: 350px;
-    padding: 1rem 22px;
-    border-radius: 10px;
+    max-width: 500px;
+    padding: 18px 30px;
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0 0 0 / 0.2);
 }
 
 .modal-title{
     text-align: center;
-    font-size: 15px;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
 }
 
 .modal-input{
     width: 100%;
-    padding: 5px 8px;
+    padding: 12px 15px;
     border: 1px solid var(--primary-color);
     border-radius: 4px;
     color: var(--primary-color);
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     outline: none;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .modal-actions{
@@ -227,12 +245,12 @@ select{
 .modal-btn{
     background: none;
     border: 1px solid var(--primary-color);
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 4px;
     font-weight: 500;
     cursor: pointer;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 .btn-cancel{
