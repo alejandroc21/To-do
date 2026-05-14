@@ -1,10 +1,19 @@
 :root {
     --primary-color: #6C63FF;
-    --primary-hover: #5850DD;
+    --primary-hover: #4b45c1;
+    --input-color: #5850DD;
     --bg-color: #F7F7F7;
     --text-color: black;
+    --icon-color: #666;
     --input-bg: #FFF;
     --shadow: 0 4px 10px rgba(0 0 0 / 0.05);
+}
+
+[data-theme="dark"]{
+    --bg-color: #252525;
+    --text-color: #fff;
+    --input-color: #fff;
+    --icon-color: #ddd;
 }
 
 *{
@@ -22,6 +31,7 @@ body{
     align-items: center;
     min-height: 100vh;
     padding: 2rem 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .wrapper{
@@ -136,6 +146,34 @@ select{
     transform: all 0.2s;
 }
 
+.todo-edit-input{
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+.todo-edit-input, .save-edit-btn, .cancel-edit-btn{
+    display: none;
+}
+
+.todo-item.editing .todo-text,
+.todo-item.editing .edit-btn,
+.todo-item.editing .delete-btn {
+    display: none;
+}
+
+.todo-item.editing .todo-edit-input, 
+.todo-item.editing .save-edit-btn, 
+.todo-item.editing .cancel-edit-btn{
+    display: block;
+}
+
+
 .todo-checkbox{
     width: 20px;
     aspect-ratio: 1/1;
@@ -183,7 +221,10 @@ select{
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    color: #666;
+}
+
+.action-btn svg{
+    fill: var(--icon-color)
 }
 
 .modal{
@@ -210,7 +251,7 @@ select{
 }
 
 .modal-card{
-    background-color: white;
+    background-color: var(--bg-color);
     width: 100%;
     max-width: 500px;
     padding: 18px 30px;
@@ -228,10 +269,11 @@ select{
 .modal-input{
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--input-color);
+    background-color: var(--bg-color);
     border-radius: 4px;
-    color: var(--primary-color);
-    margin-bottom: 100px;
+    color: var(--input-color);
+    margin-bottom: 130px;
     outline: none;
     font-weight: bold;
     font-size: 1rem;
