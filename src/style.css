@@ -34,9 +34,10 @@ body{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.wrapper{
+#wrapper{
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
+    /* margin: 0 auto; */
 }
 
 header{
@@ -55,17 +56,20 @@ header{
 
 .nav-panel{
     display: flex;
-    gap: 12px;
+    gap: 8px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .search-container{
     position: relative;
     flex-grow: 1;
+    min-width: 280px;
 }
 
 .search-input{
-    width: 511px;
+    width: 100%;
+    /* min-width: 480px; */
     padding: 10px 8px 10px 40px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
@@ -89,18 +93,24 @@ header{
     }
 }
 
+.select-actions{
+    display: flex;
+    gap: 0.5rem;
+}
+
 select{
     background-color: var(--primary-color);
     color: white;
     height: 40px;
-    width: 160px;
+    width: auto;
+    min-width: 140px;
+    flex: 0 1 160px;
     border-radius: 4px;
     outline: none;
     border: none;
     font-weight: 500;
     cursor: pointer;
     /* appearance: none;  ARROW */
-    min-width: 100px;
     text-align: left;
     padding: 5px;
     font-weight: bold;
@@ -117,6 +127,14 @@ select{
     svg{
         fill: white;
     }
+}
+
+:root:not([data-theme="dark"]) .icon-sun {
+    display: none;
+}
+
+[data-theme="dark"] .icon-moon{
+    display: none;
 }
 
 .add-btn{
@@ -140,10 +158,10 @@ select{
 .todo-item{
     display: flex;
     align-items: center;
+    width: 100%;
     padding: 15px 0;
     border-bottom: 1px solid var(--primary-color);
     gap: 15px;
-    transform: all 0.2s;
 }
 
 .todo-edit-input{
@@ -302,4 +320,34 @@ select{
 .btn-apply{
     background-color: var(--primary-color);
     color: white;
+}
+
+@media (max-width: 750px) {
+    body {
+        padding: 1rem 12px;
+    }
+
+    .header-title {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .nav-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .select-actions {
+        width: 100%;
+    }
+
+    .select-actions .select {
+        flex: 1;
+    }
+
+    .select-actions select {
+        width: 100%;
+    }
 }
